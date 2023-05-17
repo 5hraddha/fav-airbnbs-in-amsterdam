@@ -3,8 +3,8 @@ import plotly.express as px
 import streamlit as st
 
 # Display title and text
-st.title("Week 1 - Data and visualization")
-st.markdown("Here we can see the dataframe created during this weeks project.")
+st.title("Corise Week 1 - Data and visualization")
+st.markdown("The list of AirBnbs near Royal Palace Amsterdam costing under INR 5000:")
 
 # Read dataframe
 dataframe = pd.read_csv(
@@ -20,8 +20,8 @@ dataframe = pd.read_csv(
 )
 
 # We have a limited budget, therefore we would like to exclude
-# listings with a price above 10000 INR per night
-dataframe = dataframe[dataframe["Price"] <= 10000]
+# listings with a price above 5000 INR per night
+dataframe = dataframe[dataframe["Price"] <= 5000]
 
 # Display as integer
 dataframe["Airbnb Listing ID"] = dataframe["Airbnb Listing ID"].astype(int)
